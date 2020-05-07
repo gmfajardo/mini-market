@@ -46,9 +46,14 @@
     
     <!--header - contenido-->
 
-        <div>
-            <p>mas recientes</p>
-        </div>
+    <?php
+
+require('controller/controller.php');
+
+
+
+
+?>
 
 
 
