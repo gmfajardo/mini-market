@@ -36,6 +36,21 @@
             }
             return $retorno;
         }
+        public function getProductos(){
+            $query = $this->con->query('SELECT * FROM producto');
+
+            $retorno = [];
+
+            $i =0;
+
+            while ($fila = $query->fetch_assoc()){
+                $retorno [$i] =$fila;
+                $i++;                
+            }
+            return $retorno;
+        }
+        
+
     }
 
 ?>

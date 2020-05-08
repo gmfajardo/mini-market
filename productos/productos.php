@@ -50,7 +50,7 @@
 
 	$con = new Conexion();
 
-	$categorias = $con ->getCategorias();
+	$productos = $con ->getProductos();
 
 
 
@@ -62,14 +62,14 @@
         <td class="cuerpo-productos">
 
 		<?php
-			foreach ($categorias as $categoria){
-				
+			foreach ($productos as $producto){
 
 				echo '<div class="categoria">';
-				echo '<a href="productos.php">';   
+				echo '<a href="">';   
 				
-				echo '<img src="'.$categoria['imagen'].'"/ width="200px" height="163px">';
-				echo '<p>'.$categoria['nombre'].'</p>';
+				echo '<img src="'.$producto['imagen'].'"/ width="200px" height="163px">';
+                echo '<p>'.$producto['nombre'].'</p>';
+                echo '<p class="precio">'.$producto['precio'].'</p>';
 				echo '</a>';
 				echo '</div>';
 
