@@ -43,12 +43,20 @@
             <h1>Tus productos diarios mas cerca!</h1>
         </div>
     </div>
-    
+    <div class="productos-principales">
+        <img src="img/articulo-5.jpg" alt="" width="300px">
+        <img src="img/articulo-7.jpg" alt="" width="300px">
+        <img  src="img/articulo-7.jpg" alt="" width="300px">
+        
+        <img src="img/articulo-5.jpg" alt="" width="300px">
+        <img src="img/articulo-7.jpg" alt="" width="300px">
+        <img  src="img/articulo-7.jpg" alt="" width="300px">
+    </div>
     <!--header - contenido-->
 
     <?php
 
-require('controller/controller.php');
+//require('controller/controller.php');
 
 
 

@@ -114,3 +114,11 @@ header{
     color: #fff;
     margin-bottom: 20px;
 }
+.productos-principales{
+    height: 100px;
+    margin: 50px !important;
+    
+}
+.productos-principales>img{
+height: 250px;
+}

@@ -56,21 +56,29 @@
 
 
 ?>
-    
 
 <div class="tienda">
         <td class="cuerpo-productos">
+        
 
 		<?php
+
+
 			foreach ($categorias as $categoria){
 				
 
 				echo '<div class="categoria">';
-				echo '<a href="productos.php">';   
-				
+              // echo '<a>';
 				echo '<img src="'.$categoria['imagen'].'"/ width="200px" height="163px">';
-				echo '<p>'.$categoria['nombre'].'</p>';
-				echo '</a>';
+				echo '<form action="productos.php" method="POST" id="form_'.$categoria['id_categoria'].'>';
+                echo '<button type="submit" value="'.$categoria['nombre'].'" form="form_'.$categoria['id_categoria'].'">';   
+                //echo '<button value="post" type="submit" form="form_'.$categoria['id_categoria'].'">'.$categoria['nombre'].'</button>';
+                echo '<input type="hidden" name="catId" value="'.$categoria['id_categoria'].'">';
+                echo '<input value="'.$categoria['nombre'].'" name="post"  type="submit"/>';
+                //echo '<p>'.$categoria['nombre'].'</p>';
+                echo '</button>';
+                echo '</form>';
+               // echo '</a>';
 				echo '</div>';
 
 			}

@@ -50,8 +50,16 @@
 
 	$con = new Conexion();
 
-	$productos = $con ->getProductos();
-
+    
+    
+    
+    if ( isset( $_POST['post'] ) ) {
+        // echo $_POST['post'];
+        $categoriaId =  $_REQUEST['catId'];
+        $productos = $con ->getProductosPorCategoria($categoriaId);
+    } else {
+        echo 'NOOOOO';
+    }
 
 
 
