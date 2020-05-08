@@ -1,4 +1,4 @@
-foreach ($usuarios as $user){
+
                       <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +25,10 @@ foreach ($usuarios as $user){
                     <td>qloq</td>
                 </tr>
 
-                <?php  echo "<tr>";
+                <?php 
+                
+                foreach ($usuarios as $user){
+                echo "<tr>";
                         echo "<td>". $user['username']."</td>";
                         echo "<td>". $user['password']."</td>";
                         echo "<td>". $user['nombre']."</td>";

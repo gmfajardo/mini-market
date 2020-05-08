@@ -44,13 +44,51 @@
 
 <!--Contenido-->
 
+<?php
 
+	require ('../conexion.php');
+
+	$con = new Conexion();
+
+	$categorias = $con ->getCategorias();
+
+
+
+
+?>
     
 
 <div class="tienda">
         <td class="cuerpo-productos">
+
+		<?php
+			foreach ($categorias as $categoria){
+				echo $categoria['nombre'];
+
+				echo '<div class="categoria">';
+				echo '<a href="">';   
+				
+				echo '<img src="../img/articulo-2.jpg" width="200px" height="163px">'.$categoria['imagen'].;
+				echo '<p>'.$categoria['nombre'].'</p>';
+				echo '</a>';
+				echo '</div>';
+
+			}
+
+
+		?>
 					<div class="categoria">
-					<a href=""><img src="../img/articulo-2.jpg" width="200px" height="163px">
+					    <a href="">
+					
+					       <img src="../img/articulo-2.jpg" width="200px" height="163px">
+					      <p>Mas reciente</p>
+						</a>
+
+					</div>
+					<div class="categoria">
+					<a href="">
+					
+					<img src="../img/articulo-2.jpg" width="200px" height="163px">
 						<p>Mas reciente</p></a>
 
 					</div>
@@ -81,9 +119,9 @@
                     </div>
                     <div class="categoria">
 						<a href=""><img src="../img/articulo-7.jpg" width="200px" height="163">
-						<p>Alcoholicas</p></a>
+							<p>Alcoholicas</p></a>
 
-					</div>
+						</div>
 				</td>
       </div>
     
